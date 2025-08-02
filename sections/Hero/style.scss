@@ -1,0 +1,66 @@
+.introCenterImage.initial {
+  top: 80%;
+  left: 50%;
+}
+
+ 
+
+.hone {
+  font-size: clamp(55px, 8.5vw, 125px);
+  line-height: 1.1;
+}
+
+.pone {
+  font-size: clamp(15px, 2.35vw, 35px);
+  line-height: 1.1;
+}
+
+.expolore {
+  font-size: clamp(12px, 1vw, 18px);
+  line-height: 1.1;
+}
+
+@media (max-width: 650px) {
+  .hone {
+    font-size: clamp(20px, 14vw, 91px);
+  }
+
+  .pone {
+    font-size: clamp(15px, 6vw, 35px);
+  }
+
+  .expolore {
+    font-size: clamp(12px, 5vw, 20px);
+    line-height: 1.1;
+  }
+}
+
+.btn-mimas-hover {
+  background-color: transparent;
+}
+
+.btn-mimas-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%; /* اجعل الشريط خارج الزر */
+  width: 120%;
+  height: 200%;
+  background-color: white;
+  transform: skew(30deg);
+  transition: left 1.5s cubic-bezier(0.3, 1, 0.8, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.btn-mimas-hover:hover::before {
+  left: 0; /* الشريط يدخل من اليسار عند التحويم */
+}
+
+// .btn-mimas-hover:hover {
+//   background-color: white;
+// }
+
+.btn-mimas-hover:hover span {
+  color: black !important;
+}
