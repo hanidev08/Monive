@@ -151,6 +151,9 @@ export const Hero = () => {
   const centerImageWrapper = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    // ⛔️ منع التمرير أثناء الأنيميشن
+    document.body.style.overflow = "hidden";
+
     const runAnimation = () => {
       if (!centerImageWrapper.current || !centerImage.current) return;
 
@@ -159,7 +162,6 @@ export const Hero = () => {
         yPercent: -50,
       });
 
-      // Get initial Flip state
       state.current = Flip.getState([centerImageWrapper.current]);
 
       setIsInitial(true);
@@ -200,7 +202,11 @@ export const Hero = () => {
                   0
                 )
                 .add(() => {
-                  setShowContent(true); // ✅ بعد الانتهاء، نظهر المحتوى
+                  // ✅ إظهار المحتوى
+                  setShowContent(true);
+
+                  // ✅ السماح بالتمرير بعد الأنيميشن
+                  document.body.style.overflow = "auto";
                 });
             },
           });
@@ -209,6 +215,11 @@ export const Hero = () => {
     };
 
     runAnimation();
+
+    // ✅ في حال تم إلغاء المكون فجأة (clean-up)
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, []);
 
   useEffect(() => {
@@ -252,24 +263,24 @@ export const Hero = () => {
       "-=0.5"
     );
 
-    const heroTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".message-content",
-        start: "1% top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    // const heroTl = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: ".message-content",
+    //     start: "1% top",
+    //     end: "bottom top",
+    //     scrub: true,
+    //   },
+    // });
 
-    heroTl.to(".message-content", {
-      scale: 0.9,
-      yPercent: 30,
-      ease: "power1.inOut",
-    });
+    // heroTl.to(".message-content", {
+    //   scale: 0.9,
+    //   yPercent: 30,
+    //   ease: "power1.inOut",
+    // });
   }, [showContent]); // ✅ يعتمد على showContent
 
   return (
-    <section className="relative min-h-screen message-content">
+    <section className="relative min-h-screen message-content overflow-x-hidden">
       <div className="overflow-hidden">
         <div
           ref={centerImageWrapper}
