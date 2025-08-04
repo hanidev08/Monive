@@ -152,7 +152,8 @@ export const Hero = () => {
 
   useEffect(() => {
     // ⛔️ منع التمرير أثناء الأنيميشن
-    document.body.style.overflow = "hidden";
+    document.body.style.overflowX = "hidden";
+    document.body.style.overflowY = "hidden";
 
     const runAnimation = () => {
       if (!centerImageWrapper.current || !centerImage.current) return;
@@ -206,7 +207,7 @@ export const Hero = () => {
                   setShowContent(true);
 
                   // ✅ السماح بالتمرير بعد الأنيميشن
-                  document.body.style.overflow = "auto";
+                  document.body.style.overflowY = "auto";
                 });
             },
           });
@@ -280,7 +281,7 @@ export const Hero = () => {
   }, [showContent]); // ✅ يعتمد على showContent
 
   return (
-    <section className="relative min-h-screen message-content overflow-x-hidden">
+    <section className="relative min-h-screen message-content overflow-hidden">
       <div className="overflow-hidden">
         <div
           ref={centerImageWrapper}

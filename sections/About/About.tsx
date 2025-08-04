@@ -5,8 +5,8 @@ import AboutImage from "@/public/assets/image1.png";
 export const About = () => {
   return (
     <section className=" mt-[100px]">
-      <div className="container flex flex-col-reverse max-lg:gap-[150px] lg:flex-row justify-between">
-        <div className=" flex flex-col max-sm:flex-col-reverse">
+      <div className="container flex flex-col-reverse max-lg:gap-[150px] md:flex-row justify-between">
+        <div className=" flex flex-col">
           <div className="relative w-[227px] h-[296px] max-sm:w-full max-sm:h-[500px]">
             <Image
               src={AboutImage}
@@ -27,7 +27,8 @@ export const About = () => {
           </h3>
           <h1 className="about-title flex flex-col  tracking-[-2px]">
             <span>
-              <span className=" lg:hidden">&nbsp;&nbsp;</span>
+              <span className=" sm:hidden">&nbsp;&nbsp;</span>
+              <span className=" lg:hidden">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span>
               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; We&apos;re a
               creative production studio fueled by passion and innovation.
             </span>

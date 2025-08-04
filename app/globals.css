@@ -2,12 +2,12 @@
 
 @theme {
   --breakpoint-sm: 650px;
+  --breakpoint-md: 1024px;
   --breakpoint-lg: 1200px;
   --font-ppneuemontreal: "ppneuemontreal";
 }
 
 @layer components {
-  
   .paragraph-line {
     @apply text-nowrap overflow-hidden;
   }
