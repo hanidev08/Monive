@@ -54,12 +54,12 @@ export const Services = () => {
         scrub: 1,
         invalidateOnRefresh: true,
       },
-      defaults: { ease: "power1.inOut" },
+      defaults: { ease: "none" },
     });
 
     itemRefs.current.forEach((el, index) => {
       if (!el) return;
-      tl.to(el, { scale: 0.9, borderRadius: "10px" }).to(
+      tl.to(el, { scale: 0.95, borderRadius: "10px" }).to(
         itemRefs.current[index + 1],
         {
           yPercent: 0,
