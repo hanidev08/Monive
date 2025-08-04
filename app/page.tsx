@@ -5,6 +5,7 @@ import { Hero } from "@/sections/Hero";
 import { Services } from "@/sections/Services";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import { ScrollTrigger } from "gsap/ScrollTrigger"; // ← مهم
 
 export default function Home() {
   useEffect(() => {
@@ -16,6 +17,15 @@ export default function Home() {
     }
 
     requestAnimationFrame(raf);
+
+    // 🧠 هذا يخبر ScrollTrigger بأن هناك تمرير يتم بواسطة Lenis
+    lenis.on("scroll", () => {
+      ScrollTrigger.update();
+    });
+
+    return () => {
+      lenis.destroy();
+    };
   }, []);
 
   return (
