@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger"; // ← مهم
 import { Expertise } from "@/sections/Expertise";
+import { Careers } from "@/sections/Careers";
 
 export default function Home() {
   useEffect(() => {
@@ -36,6 +37,7 @@ export default function Home() {
       <About />
       <Services />
       <Expertise />
+      <Careers />
       <div className="h-dvh"></div>
     </div>
   );

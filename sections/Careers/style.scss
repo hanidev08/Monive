@@ -1,0 +1,21 @@
+.careers-titleBig {
+  font-size: clamp(50px, 20vw, 300px);
+  line-height: 1.1;
+}
+
+.careers-desc {
+  font-size: clamp(14px, 4vw, 21px);
+  line-height: 1.1;
+}
+
+.careers-title {
+  font-size: clamp(34px, 3.5vw, 53px);
+  line-height: 1.1;
+}
+
+@media (max-width: 650px) {
+  .careers-title {
+    font-size: clamp(20px, 3.5vw, 30px);
+    line-height: 1.1;
+  }
+}
