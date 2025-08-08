@@ -1,5 +1,6 @@
 "use client";
 import AboutImage from "@/public/assets/image1.png";
+import AboutImageTow from "@/public/assets/image2.png";
 import "./style.scss";
 import Image from "next/image";
 import gsap from "gsap";
@@ -11,24 +12,17 @@ gsap.registerPlugin(ScrollTrigger);
 const servicesData = [
   {
     id: "01",
-    title: ["Structural", "Engineering"],
+    title: ["Studies", "Planning"],
     description:
-      "Define your edge and steer your company into the future with positioning that clearly defines who you are, what you do, why you matter, and how you'll win.",
+      "We begin every project with a deep understanding of the context,providing thorough feasibility studies and preliminary analyses that help you make smart decisions from the outset.",
     image: AboutImage,
   },
   {
     id: "02",
-    title: ["Civil", "Engineering"],
+    title: ["Work culture ", "and approach"],
     description:
-      "Define your edge and steer your company into the future with positioning that clearly defines who you are, what you do, why you matter, and how you'llllll win.",
-    image: AboutImage,
-  },
-  {
-    id: "03",
-    title: ["Civil", "Engineering"],
-    description:
-      "Define your edge and steer your company into the future with positioning that clearly defines who you are, what you do, why you matter, and how you'llllll win.",
-    image: AboutImage,
+      "We believe that great engineering starts with great collaboration. Our culture is built on openness, curiosity, and a shared commitment to doing things right — not just fast.",
+    image: AboutImageTow,
   },
 ];
 export const Services = () => {

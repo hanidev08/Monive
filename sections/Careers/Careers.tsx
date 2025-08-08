@@ -49,21 +49,31 @@ export const Careers = () => {
       <div className="container">
         <h1 className="careers-titleBig uppercase mb-[100px]">Careers</h1>
 
-        <div className="mt-[100px] flex flex-col sm:flex-row gap-[12px] sm:gap-[556px]">
-          <h3 className="careers-desc">(Team)</h3>
-          <p className="careers-desc max-w-[323px] sm:max-w-[344px]">
-            Precision engineering supported by robust and well-integrated
-            systems that ensure efficiency, consistency, and long-term
-            reliability.
+        <div className="mt-[100px] grid grid-cols-12 max-sm:grid-cols-4 max-sm:gap-[12px] ">
+          <h3 className="careers-desc col-span-1 sm:col-span-5">(Team)</h3>
+          <p className=" col-span-4 sm:col-span-6 careers-desc max-w-[400px] sm:max-w-[344px]">
+            Our team blends technical excellence with a culture of trust and
+            collaboration, ensuring every project benefits from shared insight,
+            creativity, and precision.
           </p>
         </div>
 
-        <div
-          className="flex flex-col max-md:gap-[77px] sm:items-start 
-          md:flex-row-reverse md:gap-[144px]
-          mt-[100px]"
-        >
-          <div className="flex flex-col max-md:w-full w-[843px] gap-3 sm:gap-5">
+        <div className="mt-[100px] grid grid-cols-12 max-sm:grid-cols-4 max-sm:gap-[77px]">
+          <div
+            className=" order-1 max-sm:order-2 col-span-5 max-sm:col-span-4 relative max-w-[1024px] w-[95vw] aspect-[7/5] 
+            sm:max-w-[473px] sm:w-[32vw] sm:aspect-[5.5/5]"
+          >
+            <Image
+              src={AboutImage}
+              alt="aboutImage"
+              fill
+              className="object-cover rounded-[10px]"
+            />
+          </div>
+          <div
+            className=" order-2 max-sm:order-1 col-span-7 max-sm:col-span-4 
+          flex flex-col w-full gap-3 sm:gap-5"
+          >
             {careerItems.map((item, index) => (
               <div
                 key={item.id}
@@ -87,18 +97,6 @@ export const Careers = () => {
                 <hr className=" border-gray-500" />
               </div>
             ))}
-          </div>
-
-          <div
-            className="relative max-w-[1024px] w-[95vw] aspect-[7/5] 
-            md:max-w-[473px] md:w-[32vw] md:aspect-[5.5/5]"
-          >
-            <Image
-              src={AboutImage}
-              alt="aboutImage"
-              fill
-              className="object-cover rounded-[10px]"
-            />
           </div>
         </div>
       </div>

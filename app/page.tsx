@@ -8,6 +8,7 @@ import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger"; // ← مهم
 import { Expertise } from "@/sections/Expertise";
 import { Careers } from "@/sections/Careers";
+import { Footer } from "@/sections/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -38,7 +39,8 @@ export default function Home() {
       <Services />
       <Expertise />
       <Careers />
-      <div className="h-dvh"></div>
+      <Footer />
+      {/* <div className="h-dvh"></div> */}
     </div>
   );
 }
