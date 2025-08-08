@@ -45,7 +45,7 @@ export const Careers = () => {
   };
 
   return (
-    <section className="mt-[200px]">
+    <section className="mt-[200px]" id="careers">
       <div className="container">
         <h1 className="careers-titleBig uppercase mb-[100px]">Careers</h1>
 

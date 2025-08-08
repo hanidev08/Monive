@@ -319,7 +319,7 @@ export const Hero = () => {
                     duration-500 bg-transparent"
                     >
                       <span className="relative z-10 transition-colors duration-500">
-                        See all projects
+                        Let’s work
                       </span>
                       <span
                         className="text-[21px] leading-[30px] relative 

@@ -18,10 +18,7 @@ export default function Home() {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
-
-    // 🧠 هذا يخبر ScrollTrigger بأن هناك تمرير يتم بواسطة Lenis
     lenis.on("scroll", () => {
       ScrollTrigger.update();
     });
@@ -40,7 +37,6 @@ export default function Home() {
       <Expertise />
       <Careers />
       <Footer />
-      {/* <div className="h-dvh"></div> */}
     </div>
   );
 }

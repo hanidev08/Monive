@@ -4,13 +4,11 @@ import AboutImage from "@/public/assets/image1.png";
 
 export const About = () => {
   return (
-    <section className=" mt-[100px]">
+    <section className=" mt-[100px]" id="#about">
       <div className="container grid grid-cols-12 max-sm:grid-cols-4 max-sm:gap-40">
         <div className="order-1 max-sm:order-2 col-span-5 max-sm:col-span-4 flex flex-col">
-          <div
-            className="relative max-w-[223px] w-[14.8vw] max-sm:w-[35.5vw] 
-          max-m:w-[100vw] max-m:max-w-[500px] aspect-[4/5]"
-          >
+          <div className="relative max-w-[223px] w-[14.8vw] max-sm:w-[100vw] 
+          max-sm:max-w-[650px] aspect-[4/5] max-sm:aspect-[6/5]">
             <Image
               src={AboutImage}
               alt="aboutImage"
@@ -19,16 +17,19 @@ export const About = () => {
             />
           </div>
           <div className=" mt-5 max-sm:mb-5 max-w-[227px]">
-            <h3 className=" leading-4">
+            <h3
+              className="max-sm:text-[16px] max-sm:leading-[24px]
+            text-[20px] leading-[29px]"
+            >
               Some photos of our work in design field.
             </h3>
           </div>
         </div>
         <div className=" order-2 max-sm:order-1 col-span-7 max-sm:col-span-4 flex items-start">
-          <h3 className=" text-[21px] leading-[30px] absolute max-sm:text-[16px] max-sm:leading-[24px]">
+          <h3 className=" text-[20px] leading-[29px] absolute max-sm:text-[16px] max-sm:leading-[24px]">
             (About Us)
           </h3>
-          <h1 className="about-title flex flex-col tracking-[-2px]">
+          <h1 className="about-title flex flex-col tracking-[-1px]">
             <span className=" indent-22 sm:indent-38">
               We are a consulting firm combining structural and civil
               engineering

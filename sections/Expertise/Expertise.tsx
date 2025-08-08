@@ -25,7 +25,7 @@ export const Expertise = () => {
   const [selectedProject, setSelectedProject] = useState(0);
 
   return (
-    <section className="mt-[100px] sm:mt-[200px]">
+    <section className="mt-[100px] sm:mt-[200px]" id="expertise">
       <div className="container">
         <div className="flex items-start justify-between">
           <h3 className="text-[21px] leading-[30px]">(Expertise)</h3>

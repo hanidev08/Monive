@@ -4,7 +4,7 @@ import one from "@/public/assets/image4.png";
 
 export const Footer = () => {
   return (
-    <footer className=" mt-[100px] sm:mt-[200px] overflow-hidden">
+    <footer className=" mt-[100px] sm:mt-[200px] overflow-hidden" id="contact">
       <div className=" relative w-full min-h-screen">
         <Image
           src={one}
