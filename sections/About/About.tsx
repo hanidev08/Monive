@@ -7,7 +7,7 @@ export const About = () => {
     <section className=" mt-[100px]" id="#about">
       <div className="container grid  grid-cols-4  sm:grid-cols-12 gap-y-[40px] sm:gap-y-0">
         <div className="order-1 max-sm:order-2 sm:col-span-5 col-span-4 flex flex-col">
-          <div className="relative max-w-[223px] w-[14.8vw] max-sm:w-[96vw] 
+          <div className="relative max-w-[223px] w-[14.8vw] max-sm:w-[90vw] 
           max-sm:max-w-[650px] aspect-[4/5] max-sm:aspect-[6/5]">
             <Image
               src={AboutImage}

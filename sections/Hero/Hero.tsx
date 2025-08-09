@@ -12,8 +12,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
   useEffect(() => {
+    // const titleSplit = SplitText.create(".hero-title", {
+    //   type: "chars",
+    // });
+
     const titleSplit = SplitText.create(".hero-title", {
-      type: "chars",
+      type: "words, lines",
+      linesClass: "paragraph-line",
     });
     const paragraphSplit = SplitText.create(".paragraph-title", {
       type: "words, lines",
@@ -23,13 +28,11 @@ export const Hero = () => {
     const tl = gsap.timeline();
 
     tl.to(".message-content", {
-      opacity: 1,
-      y: 0,
       ease: "power1.inOut",
     });
 
     tl.from(
-      titleSplit.chars,
+      titleSplit.words,
       {
         yPercent: 300,
         rotate: 3,
@@ -37,7 +40,7 @@ export const Hero = () => {
         duration: 1,
         stagger: 0.01,
       },
-      "-=0.5"
+      "0"
     ).from(
       paragraphSplit.words,
       {
@@ -47,7 +50,7 @@ export const Hero = () => {
         duration: 1,
         stagger: 0.01,
       },
-      "-=0.5"
+      "0"
     );
 
     // const heroTl = gsap.timeline({
@@ -65,7 +68,7 @@ export const Hero = () => {
     // });
   }, []);
   return (
-    <section className="relative message-content opacity-0">
+    <section className="relative message-content">
       <div className="overflow-hidden">
         <div className=" relative w-[100vw] min-h-[100vh]">
           <Image
@@ -281,7 +284,7 @@ export const Hero = () => {
 //   }, [showContent]); // ✅ يعتمد على showContent
 
 //   return (
-//     <section className="relative min-h-screen message-content overflow-hidden">
+//     <section className="relative min-h-screen message-content overflow-hidden ">
 //       <div className="overflow-hidden">
 //         <div
 //           ref={centerImageWrapper}
@@ -301,7 +304,7 @@ export const Hero = () => {
 //           {showContent && (
 //             <div className="container z-50 hero-content opacity-0">
 //               <div
-//                 className="inline-flex flex-col justify-between 
+//                 className="inline-flex flex-col justify-between
 //                h-[calc(100vh-100px)] relative top-[100px]"
 //               >
 //                 <div className="flex flex-col gap-[40px]">
@@ -312,18 +315,18 @@ export const Hero = () => {
 //                   </h1>
 //                   <div className="hidden sm:flex">
 //                     <button
-//                       className="cursor-pointer z-50 w-[217px] h-[57px] 
-//                     rounded-[5px] flex justify-between items-center uppercase 
-//                     text-white py-[20px] px-[10px] border border-white 
-//                     relative overflow-hidden btn-mimas-hover transition-colors 
+//                       className="cursor-pointer z-50 w-[217px] h-[57px]
+//                     rounded-[5px] flex justify-between items-center uppercase
+//                     text-white py-[20px] px-[10px] border border-white
+//                     relative overflow-hidden btn-mimas-hover transition-colors
 //                     duration-500 bg-transparent"
 //                     >
-//                       <span className="relative z-10 transition-colors duration-500">
+//                       <span className="relative z-50 transition-colors duration-500">
 //                         Let’s work
 //                       </span>
 //                       <span
-//                         className="text-[21px] leading-[30px] relative 
-//                       z-10 transition-colors duration-500"
+//                         className="text-[21px] leading-[30px] relative
+//                       z-50 transition-colors duration-500"
 //                       >
 //                         →
 //                       </span>

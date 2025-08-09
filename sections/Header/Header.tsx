@@ -8,8 +8,7 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import Link from "next/link";
-import "./style.scss";
+ import "./style.scss";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -99,7 +98,7 @@ export const Header = () => {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`fixed z-50 w-full transition-colors duration-500 h-screen ${
+      className={`fixed z-30 w-full transition-colors duration-500 h-screen sm:h-[80px] ${
         scrolledPastHero ? "text-black" : "text-white"
       }`}
      >
