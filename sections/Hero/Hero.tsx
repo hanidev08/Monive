@@ -80,13 +80,13 @@ export const Hero = () => {
           <div className="container z-50">
             <div className=" inline-flex flex-col justify-between h-[calc(100vh-100px)] relative top-[100px]">
               <div className=" flex flex-col gap-[40px]">
-                <h1 className="hero-title hone text-white z-50 tracking-tight overflow-hidden">
+                <h1 className="hero-title hone text-white  tracking-tight overflow-hidden">
                   <span>Get set for a</span>
                   <br />
                   <span>solid foundation</span>
                 </h1>
                 <div className="hidden sm:flex">
-                  <button className=" cursor-pointer z-50 w-[217px] h-[57px] rounded-[5px] flex justify-between items-center uppercase text-white py-[20px] px-[10px] border border-white relative overflow-hidden btn-mimas-hover transition-colors duration-500 bg-transparent">
+                  <button className=" cursor-pointer  w-[217px] h-[57px] rounded-[5px] flex justify-between items-center uppercase text-white py-[20px] px-[10px] border border-white relative overflow-hidden btn-mimas-hover transition-colors duration-500 bg-transparent">
                     <span className="relative z-10 transition-colors duration-500">
                       See all projects
                     </span>

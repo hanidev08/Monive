@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import "./style.scss";
 import AboutImage from "@/public/assets/image1.png";
+import { AnimatePresence, motion } from "framer-motion";
 
 const careerItems = [
   {
@@ -38,11 +39,7 @@ const careerItems = [
 ];
 
 export const Careers = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleItem = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
     <section className="mt-[200px]" id="careers">
@@ -80,28 +77,35 @@ export const Careers = () => {
                 className="flex flex-col gap-3 sm:gap-5 border-[#808080] cursor-pointer"
               >
                 <div
-                  className=" grid grid-cols-12 "
-                  onClick={() => toggleItem(index)}
+                  className="grid grid-cols-12"
+                  onClick={() => setSelectedIndex(index)}
                 >
                   <h1 className="careers-title col-span-3">{item.id}</h1>
                   <div className="col-span-9 flex justify-between">
                     <h1 className="careers-title">{item.title}</h1>
-                    <h1 className="careers-title">
-                      {openIndex === index ? "-" : "+"}
+                    <h1 className="careers-title ">
+                      {selectedIndex === index ? "-" : "+"}
                     </h1>
                   </div>
                 </div>
-                {openIndex === index && (
-                  <div className=" grid grid-cols-12">
-                    <p
-                      className=" col-start-4 col-end-12 text-[14px] leading-[20px] 
-                      max-w-[400px] max-sm:max-w-[250px] transition-all 
-                    duration-300 ease-in-out text-gray-400"
-                    >
-                      {item.answer}
-                    </p>
-                  </div>
-                )}
+                <AnimatePresence>
+                  {selectedIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }} // مدة ونعومة الحركة
+                      className="grid grid-cols-12 overflow-hidden"
+                     >
+                      <p
+                        className=" col-start-4 col-end-12 text-[14px] leading-[20px] 
+                      max-w-[400px] max-sm:max-w-[250px] text-gray-400"
+                      >
+                        {item.answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 <hr className=" border-gray-500" />
               </div>
             ))}
