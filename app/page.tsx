@@ -11,22 +11,22 @@ import { Careers } from "@/sections/Careers";
 import { Footer } from "@/sections/Footer";
 
 export default function Home() {
-  useEffect(() => {
-    const lenis = new Lenis();
+  // useEffect(() => {
+  //   const lenis = new Lenis();
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    lenis.on("scroll", () => {
-      ScrollTrigger.update();
-    });
+  //   function raf(time: number) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
+  //   lenis.on("scroll", () => {
+  //     ScrollTrigger.update();
+  //   });
 
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     lenis.destroy();
+  //   };
+  // }, []);
 
   return (
     <div>

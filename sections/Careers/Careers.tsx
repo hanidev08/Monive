@@ -80,19 +80,27 @@ export const Careers = () => {
                 className="flex flex-col gap-3 sm:gap-5 border-[#808080] cursor-pointer"
               >
                 <div
-                  className="flex justify-between"
+                  className=" grid grid-cols-12 "
                   onClick={() => toggleItem(index)}
                 >
-                  <h1 className="careers-title">{item.id}</h1>
-                  <h1 className="careers-title">{item.title}</h1>
-                  <h1 className="careers-title">
-                    {openIndex === index ? "-" : "+"}
-                  </h1>
+                  <h1 className="careers-title col-span-3">{item.id}</h1>
+                  <div className="col-span-9 flex justify-between">
+                    <h1 className="careers-title">{item.title}</h1>
+                    <h1 className="careers-title">
+                      {openIndex === index ? "-" : "+"}
+                    </h1>
+                  </div>
                 </div>
                 {openIndex === index && (
-                  <p className="careers-desc transition-all duration-300 ease-in-out text-gray-400">
-                    {item.answer}
-                  </p>
+                  <div className=" grid grid-cols-12">
+                    <p
+                      className=" col-start-4 col-end-12 text-[14px] leading-[20px] 
+                      max-w-[400px] max-sm:max-w-[250px] transition-all 
+                    duration-300 ease-in-out text-gray-400"
+                    >
+                      {item.answer}
+                    </p>
+                  </div>
                 )}
                 <hr className=" border-gray-500" />
               </div>

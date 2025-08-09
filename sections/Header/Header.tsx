@@ -102,7 +102,7 @@ export const Header = () => {
       className={`fixed z-50 w-full transition-colors duration-500 h-screen ${
         scrolledPastHero ? "text-black" : "text-white"
       }`}
-    >
+     >
       <div
         ref={navScope}
         className=" container left-0 right-0 w-full h-0 bg-black overflow-hidden"
@@ -130,7 +130,7 @@ export const Header = () => {
           ))}
         </nav>
       </div>
-      <div className="container fixed top-0 left-0 pt-3 md:pt-5 flex items-center justify-between">
+      <div className="container fixed top-0 w-full left-0 pt-3 md:pt-5 flex items-center justify-between">
         <div className="uppercase text-[30px] font-bold leading-[40px] z-10 cursor-pointer">
           {isActive ? (
             <div className=" text-white cursor-pointer ">Monive</div>
