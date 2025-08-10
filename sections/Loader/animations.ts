@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 gsap.defaults({
-  duration: 5,
+  duration: 4,
   ease: "expo.inOut",
 });
 
@@ -15,7 +15,7 @@ export const introAnimation = (centerImageWrapperRef: HTMLElement | null) => {
     {
       opacity: 1,
       y: 0,
-      duration: 4,
+      duration: 7,
       delay: 0.2,
       ease: "expo.out",
     }
