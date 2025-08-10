@@ -94,7 +94,7 @@ export const Hero = () => {
                 <div className="hidden sm:flex">
                   <button className=" cursor-pointer  w-[217px] h-[57px] rounded-[5px] flex justify-between items-center uppercase text-white py-[20px] px-[10px] border border-white relative overflow-hidden btn-mimas-hover transition-colors duration-500 bg-transparent">
                     <span className="relative z-10 transition-colors duration-500">
-                      See all projects
+                      Let’s work
                     </span>
                     <span className="text-[21px] leading-[30px] relative z-10 transition-colors duration-500">
                       →

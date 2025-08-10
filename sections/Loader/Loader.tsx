@@ -3,8 +3,7 @@ import "./style.scss";
 import one from "@/public/assets/image3.png";
 import Image from "next/image";
 import { introAnimation, scaleCenterImage } from "./animations";
-import { gsap } from "gsap";
-
+ 
 interface LoaderProps {
   timeline: gsap.core.Timeline | null;
 }

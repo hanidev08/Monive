@@ -10,7 +10,7 @@ export const Footer = () => {
           src={one}
           alt="img1"
           fill
-          className="filter brightness-10 object-cover"
+          className="filter brightness-15 object-cover"
         />
         <div
           className="flex flex-col justify-between z-40 mt-3  h-[calc(100vh-12px)] relative top-[12px]
