@@ -76,7 +76,7 @@ export const Hero = () => {
   return (
     <section className="relative message-content">
       <div className="overflow-hidden">
-        <div className=" relative w-[100vw] min-h-[100vh]">
+        <div className=" relative w-[100vw] h-dvh sm:min-h-[100vh]">
           <Image
             src={one}
             alt="img1"
