@@ -27,6 +27,11 @@ export const Hero = () => {
 
     const tl = gsap.timeline();
 
+    tl.to(".hero-content", {
+      opacity: 1,
+      ease: "power1.inOut",
+    });
+
     tl.to(".message-content", {
       ease: "power1.inOut",
     });
@@ -77,7 +82,7 @@ export const Hero = () => {
             fill
             className="filter brightness-40 object-cover object-right-bottom"
           />
-          <div className="container z-50">
+          <div className="container hero-content opacity-0 z-50">
             <div className=" inline-flex flex-col justify-between h-[calc(100vh-100px)] relative top-[100px]">
               <div className=" flex flex-col gap-[40px]">
                 <h1 className="hero-title hone text-white  tracking-tight overflow-hidden">
