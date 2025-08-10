@@ -30,6 +30,7 @@ export const Hero = () => {
     tl.to(".hero-content", {
       opacity: 1,
       ease: "power1.inOut",
+      duration: 0.5,
     });
 
     tl.to(".message-content", {
@@ -45,7 +46,7 @@ export const Hero = () => {
         duration: 1,
         stagger: 0.01,
       },
-      "0"
+      "0.5"
     ).from(
       paragraphSplit.words,
       {
@@ -55,7 +56,7 @@ export const Hero = () => {
         duration: 1,
         stagger: 0.01,
       },
-      "0"
+      "0.5"
     );
 
     // const heroTl = gsap.timeline({
