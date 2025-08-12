@@ -18,24 +18,40 @@ export const Footer = () => {
         >
           <div className="container flex flex-col sm:flex-row sm:justify-between max-sm:gap-3">
             <h1 className="footer-title text-white z-40">Work with us</h1>
-            <h1 className="footer-title underline underline-offset-4 text-white z-40">
+            <h1 className="footer-title  text-white z-40 menu-link cursor-pointer">
               work@monive.com
             </h1>
           </div>
           <div className="container relative md:mt-[100px] flex justify-between ">
             <div className=" flex gap-[100px]">
               <ul className="footer-desc ">
-                <li className=" text-white z-40">Sitemap</li>
-                <li className=" mt-[20px] text-gray-400  z-40">Home</li>
-                <li className=" text-gray-400  z-40">Projects</li>
-                <li className=" text-gray-400  z-40">Home</li>
-                <li className=" text-gray-400  z-40">Contact</li>
+                <li className=" text-white z-40 menu-link">Sitemap</li>
+                <li className=" mt-[20px] text-gray-400 z-40 menu-link cursor-pointer">
+                  Home
+                </li>
+                <li className=" text-gray-400 z-40 menu-link cursor-pointer">
+                  Projects
+                </li>
+                <li className=" text-gray-400 z-40 menu-link cursor-pointer">
+                  Home
+                </li>
+                <li className=" text-gray-400 z-40 menu-link cursor-pointer">
+                  Contact
+                </li>
               </ul>
               <ul className="footer-desc">
-                <li className="text-white z-40">Socials</li>
-                <li className="mt-[20px] text-gray-400  z-40">Instagram</li>
-                <li className=" text-gray-400  z-40">LinkedIn</li>
-                <li className=" text-gray-400  z-40">Behance</li>
+                <li className="text-white z-40 menu-link cursor-pointer">
+                  Socials
+                </li>
+                <li className="mt-[20px] text-gray-400 z-40 menu-link cursor-pointer">
+                  Instagram
+                </li>
+                <li className=" text-gray-400 z-40 menu-link cursor-pointer">
+                  LinkedIn
+                </li>
+                <li className=" text-gray-400 z-40 menu-link cursor-pointer">
+                  Behance
+                </li>
               </ul>
             </div>
             {/* <div className=" uppercase text-white">Dev by Zine Hani</div> */}

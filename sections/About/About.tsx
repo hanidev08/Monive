@@ -1,10 +1,9 @@
 "use client";
-import Image from "next/image";
-import "./style.scss";
-import img1 from "@/public/assets/image1.png";
+ import "./style.scss";
+import img1 from "@/public/assets/image5.png";
 import img2 from "@/public/assets/image2.png";
 import img3 from "@/public/assets/image3.png";
-import img4 from "@/public/assets/image4.png";
+import img4 from "@/public/assets/image6.png";
 import { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 
@@ -24,7 +23,7 @@ export const About = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className=" mt-[100px]" id="#about">
+    <section className=" mt-[100px]" id="about">
       <div className="container grid  grid-cols-4  sm:grid-cols-12 gap-y-[40px] sm:gap-y-0">
         <div className="order-1 max-sm:order-2 sm:col-span-5 col-span-4 flex flex-col">
           <div

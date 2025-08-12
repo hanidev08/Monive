@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import "./style.scss";
-import AboutImage from "@/public/assets/image1.png";
+import AboutImage from "@/public/assets/image7.png";
 import { AnimatePresence, motion } from "framer-motion";
 
 const careerItems = [
@@ -42,7 +42,7 @@ export const Careers = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <section className="mt-[200px]" id="careers">
+    <section className="mt-[200px]" id="carrers">
       <div className="container">
         <h1 className="careers-titleBig uppercase mb-[100px]">Careers</h1>
 

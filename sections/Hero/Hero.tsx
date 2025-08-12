@@ -12,10 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
   useEffect(() => {
-    // const titleSplit = SplitText.create(".hero-title", {
-    //   type: "chars",
-    // });
-
     const titleSplit = SplitText.create(".hero-title", {
       type: "words, lines",
       linesClass: "paragraph-line",
@@ -58,20 +54,6 @@ export const Hero = () => {
       },
       "0.5"
     );
-
-    // const heroTl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".message-content",
-    //     start: "1% top",
-    //     end: "bottom top",
-    //     scrub: true,
-    //   },
-    // });
-    // heroTl.to(".message-content", {
-    //   scale: 0.9,
-    //   yPercent: 30,
-    //   ease: "power1.inOut",
-    // });
   }, []);
   return (
     <section className="relative message-content">
@@ -84,15 +66,20 @@ export const Hero = () => {
             className="filter brightness-40 object-cover object-right-bottom"
           />
           <div className="container hero-content opacity-0 z-50">
-            <div className=" inline-flex flex-col justify-between h-[calc(100vh-100px)] relative top-[100px]">
+            <div className=" inline-flex flex-col justify-between h-[calc(100vh-100px)] 
+            relative top-[100px]">
               <div className=" flex flex-col gap-[40px]">
-                <h1 className="hero-title hone text-white  tracking-tight overflow-hidden">
+                <h1 className="hero-title hone text-white tracking-tight overflow-hidden">
                   <span>Get set for a</span>
                   <br />
                   <span>solid foundation</span>
                 </h1>
                 <div className="hidden sm:flex">
-                  <button className=" cursor-pointer  w-[217px] h-[57px] rounded-[5px] flex justify-between items-center uppercase text-white py-[20px] px-[10px] border border-white relative overflow-hidden btn-mimas-hover transition-colors duration-500 bg-transparent">
+                  <button
+                    className=" cursor-pointer  w-[217px] h-[57px] rounded-[5px] flex justify-between 
+                  items-center uppercase text-white py-[20px] px-[10px] border border-white 
+                  relative overflow-hidden btn-mimas-hover transition-colors duration-500 bg-transparent"
+                  >
                     <span className="relative z-10 transition-colors duration-500">
                       Let’s work
                     </span>
@@ -103,7 +90,7 @@ export const Hero = () => {
                 </div>
               </div>
               <div className="hidden sm:flex">
-                <p className="   pone text-white sm:pb-[20px] paragraph-title">
+                <p className="pone text-white sm:pb-[20px] paragraph-title">
                   <span> Engineering resilient cities</span>
                   <br />
                   <span>with smart and sustainable</span>

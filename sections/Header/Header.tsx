@@ -8,7 +8,9 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
- import "./style.scss";
+import "./style.scss";
+
+import gsap from "gsap";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -40,6 +42,16 @@ export const Header = () => {
   const description = useRef(null);
   const isInViewAnimate = useInView(description, { once: false });
   const shouldAnimate = isActive && isInViewAnimate;
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.to(".footer-content", {
+      opacity: 1,
+      ease: "power1.inOut",
+      duration: 1,
+    });
+  }, []);
 
   useEffect(() => {
     if (isActive) {
@@ -90,6 +102,17 @@ export const Header = () => {
     target.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleClickNav = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    const url = new URL(e.currentTarget.href);
+    const hash = url.hash;
+
+    const target = document.querySelector(hash);
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <motion.header
       variants={{
@@ -98,10 +121,10 @@ export const Header = () => {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`fixed z-50 w-full transition-colors duration-500 h-screen sm:h-[80px] ${
+      className={`footer-content opacity-0 fixed z-50 w-full transition-colors duration-500 h-screen sm:h-[80px] ${
         scrolledPastHero ? "text-black" : "text-white"
       }`}
-     >
+    >
       <div
         ref={navScope}
         className=" container left-0 right-0 w-full h-0 bg-black overflow-hidden"
@@ -150,19 +173,27 @@ export const Header = () => {
           )}
         </div>
         <div className="hidden sm:flex items-center gap-10">
-          <a href="#about" className="nav menu-link">
+          <a href="#about" className="nav menu-link" onClick={handleClickNav}>
             About
           </a>
-          <a href="#carrers" className="nav menu-link">
+          <a href="#carrers" className="nav menu-link" onClick={handleClickNav}>
             Carrers
           </a>
-          <a href="#services" className="nav menu-link">
+          <a
+            href="#services"
+            className="nav menu-link"
+            onClick={handleClickNav}
+          >
             Services
           </a>
-          <a href="#expertise" className="nav menu-link">
+          <a
+            href="#expertise"
+            className="nav menu-link"
+            onClick={handleClickNav}
+          >
             Expertise
           </a>
-          <a href="#contact" className="nav menu-link">
+          <a href="#contact" className="nav menu-link" onClick={handleClickNav}>
             Contact
           </a>
         </div>

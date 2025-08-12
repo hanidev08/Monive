@@ -1,5 +1,5 @@
 "use client";
-import AboutImage from "@/public/assets/image1.png";
+import AboutImage from "@/public/assets/image5.png";
 import AboutImageTow from "@/public/assets/image2.png";
 import "./style.scss";
 import Image from "next/image";

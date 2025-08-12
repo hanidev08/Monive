@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.scss";
-import AboutImage from "@/public/assets/image1.png";
+import AboutImage from "@/public/assets/image6.png";
 import AboutOne from "@/public/assets/image2.png";
 import AboutTow from "@/public/assets/image3.png";
 import Image from "next/image";
