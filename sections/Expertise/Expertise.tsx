@@ -51,6 +51,7 @@ export const Expertise = () => {
                 src={expertiseData[selectedProject].image}
                 alt="aboutImage"
                 fill
+                priority
                 className="object-cover rounded-[10px]"
               />
             </div>
@@ -79,6 +80,7 @@ export const Expertise = () => {
                       src={item.image}
                       alt={`${item.title} image`}
                       fill
+                      priority
                       className="object-cover rounded-[10px]"
                     />
                   </div>

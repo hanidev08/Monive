@@ -64,6 +64,7 @@ export const Careers = () => {
               src={AboutImage}
               alt="aboutImage"
               fill
+              priority
               className="object-cover rounded-[10px]"
             />
           </div>
@@ -96,7 +97,7 @@ export const Careers = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.4, ease: "easeInOut" }} // مدة ونعومة الحركة
                       className="grid grid-cols-12 overflow-hidden"
-                     >
+                    >
                       <p
                         className=" col-start-4 col-end-12 text-[14px] leading-[20px] 
                       max-w-[400px] max-sm:max-w-[250px] text-gray-400"

@@ -113,6 +113,7 @@ export const Services = () => {
                         src={service.image}
                         alt="aboutImage"
                         fill
+                        priority
                         className="object-cover"
                       />
                     </div>

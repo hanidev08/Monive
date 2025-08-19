@@ -10,6 +10,7 @@ export const Footer = () => {
           src={one}
           alt="img1"
           fill
+          priority
           className="filter brightness-15 object-cover"
         />
         <div

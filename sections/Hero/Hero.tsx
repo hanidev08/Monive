@@ -58,16 +58,19 @@ export const Hero = () => {
   return (
     <section className="relative message-content">
       <div className="overflow-hidden">
-        <div className=" relative w-[100vw] min-h-[100vh]">
+        <div className=" relative w-[100vw] min-h-[100dvh]">
           <Image
             src={one}
             alt="img1"
             fill
+            priority
             className="filter brightness-40 object-cover object-right-bottom"
           />
           <div className="container hero-content opacity-0 z-50">
-            <div className=" inline-flex flex-col justify-between h-[calc(100vh-100px)] 
-            relative top-[100px]">
+            <div
+              className=" inline-flex flex-col justify-between h-[calc(100vh-100px)] 
+            relative top-[100px]"
+            >
               <div className=" flex flex-col gap-[40px]">
                 <h1 className="hero-title hone text-white tracking-tight overflow-hidden">
                   <span>Get set for a</span>

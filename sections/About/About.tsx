@@ -18,7 +18,7 @@ export const About = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
