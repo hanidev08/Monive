@@ -1,11 +1,20 @@
 "use client";
 
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { gsap } from "gsap";
 import { Loader } from "@/sections/Loader";
+import Lenis from "lenis";
 
 export default function Home() {
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   function raf(time: number) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
+  // }, []);
   const router = useRouter();
   const [timeline, setTimeline] = useState<gsap.core.Timeline | null>(null);
 

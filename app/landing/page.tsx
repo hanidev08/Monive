@@ -6,8 +6,7 @@ import { Footer } from "@/sections/Footer";
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { Services } from "@/sections/Services";
-import React from "react";
-
+  
 const page = () => {
   return (
     <div>
