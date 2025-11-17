@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@studio-freight/lenis": "^1.0.42",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
@@ -17,7 +18,8 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-responsive": "^10.0.1",
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "smooothy": "^0.0.26"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

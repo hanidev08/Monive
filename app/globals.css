@@ -5,10 +5,40 @@
   --breakpoint-sm: 650px;
   --breakpoint-md: 1024px;
   --breakpoint-lg: 1200px;
-  --font-ppneuemontreal: "ppneuemontreal";
+  --font-epilogue: "epilogue";
 }
 
-@layer components {
+/* ::-webkit-scrollbar{
+  display: none;
+  -webkit-animation: none;
+  width: 0;
+  height: 0;
+} */
+
+[data-slide],
+[data-carouse] {
+  display: flex;
+  user-select: none;
+}
+
+[data-slider],
+[data-carouse] {
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* [data-text-center] > .text {
+  font-size: max(44px, min(3.472vw, 66.5px));
+  letter-spacing: -0.05em;
+}
+
+@media (max-width: 1023px) {
+  [data-text-center] > .text {
+    font-size: min(7.698vw, 34.5px);
+  }
+} */
+
+/* @layer components {
   .paragraph-line {
     @apply text-nowrap overflow-hidden;
   }
@@ -30,25 +60,4 @@
       padding-left: 20px;
     }
   }
-}
-
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
-}
+} */
